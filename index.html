@@ -1,0 +1,60 @@
+<!doctype html>
+<html >
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1..png">
+<title>Application-form3</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <!--<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    
+    <script src="https://code.angularjs.org/1.2.13/angular.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script> -->
+ 
+    
+     <link  rel="stylesheet" type="text/css" href="styleAngular.css">
+    
+   
+     </head>
+   
+        <body ng-app="website"> 
+             
+        <div class = "container-fluid" id="cont1">
+          
+            <div class="row">
+                <div class="col-md-12 col-xs-6">
+                <div id ="menu" align="center">
+                    <a ui-sref="Products" class ="btn"> Products </a>
+                    <a ui-sref="AboutUs" class ="btn"> About US </a>
+                    <a ui-sref="Services" class ="btn"> Services </a>
+                    <a ui-sref="ProductDetails" class ="btn"> Product details </a>
+                    <a ui-sref="ProductList" class ="btn" >Get Product List </a>
+                    
+                    
+                    
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class ="container" id="cont2">
+            <div ui-view>
+                </div>
+            </div>
+                  </div>
+            
+
+   <script src="bower_components/angular/angular.js"></script> 
+   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+
+
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="service1.js"></script>
+    <script type="text/javascript" src="productDetailsController.js"></script>
+    <script type="text/javascript" src="productListController.js"></script>
+     <script type="text/javascript" src="updateProductController.js"></script>
+          
+              </body>
+            
+  
+</html>

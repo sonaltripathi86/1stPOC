@@ -1,0 +1,11 @@
+
+
+<div>
+  <ul>
+    <li data-ng-repeat="x in details">
+        id: <a ng-href="#/UpdateProduct" ng-click="updateID(x)">{{x._id}}</a> Name: {{ x.name }} Model: {{ x.model }} Company: {{x.company}} Yearofmanufacturing: {{x.yearofmanufacturing}}
+        <button type ="button" ng-click="delete(x._id)">Delete</button>
+    </li>
+  </ul>
+</div>
+
