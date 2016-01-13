@@ -1,4 +1,9 @@
+var url = 'http://localhost:3000/api/car/';
+
 var app =angular.module("website", ["ui.router"]);
+
+
+//app.constant('url','http://localhost:3000/api/car/');
 
 app.config(function($stateProvider, $urlRouterProvider)
     {
@@ -9,7 +14,8 @@ app.config(function($stateProvider, $urlRouterProvider)
         
         .state('Products', {
             url: '/Products',
-    templateUrl: 'products.html'
+    templateUrl: 'products.html',
+        directive: 'productsDirective'
         })
         
         .state('AboutUs', {
@@ -24,7 +30,8 @@ app.config(function($stateProvider, $urlRouterProvider)
     .state('ProductDetails', {
              url: '/ProductDetails',
             templateUrl: 'productDetails.html',
-            controller: 'productDetailsController'
+            controller: 'productDetailsController',
+             directive:'productDetailsDirective'
         })
     .state('ProductList', {
              url: '/ProductList',

@@ -1,4 +1,6 @@
 app.controller('productListController', function ($scope, $http,$window, service1) {
+    
+     $scope.url= $window.url;
         $scope.details="";
         $scope.name = "";
       $scope.mod="";
@@ -8,7 +10,7 @@ app.controller('productListController', function ($scope, $http,$window, service
         $scope.data="";
         $scope.getList = function(){
             
-            $http.get('http://localhost:3000/api/car/')
+            $http.get( $scope.url)
             .success(function (data, status, headers, config) {
                 console.log("data: ",angular.toJson(data));
                 $scope.details = data;
@@ -21,10 +23,11 @@ app.controller('productListController', function ($scope, $http,$window, service
            
             console.log(id);
            // console.log("****",service1);
-            $http.delete('http://localhost:3000/api/car/' + id)
+            $http.delete( $scope.url + id)
             .success(function (data, status, headers) {
                 $scope.ServerResponse = data;
                  $window.location.reload();
+                //$scope.reset();
             }) 
         }
         
@@ -36,5 +39,25 @@ app.controller('productListController', function ($scope, $http,$window, service
              console.log(x);
              service1.setData($scope.data);
         }
+        /*
+         errorCallback = function(){
+        console.log("****");
         
+
+
+    }
+    successCallback = function(data) {
+    $scope.details=data;
+    console.log("///***data ",details);
+   }
+   var config = {
+                headers : {
+                    'Content-Type': 'application/json'
+                }
+            }
+    $scope.reset = function() {
+        console.log(config);
+        $http.get('http://10.252.50.74:3000/api/contact/', config).then(successCallback);
+
+      };*/
     })

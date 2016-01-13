@@ -1,5 +1,7 @@
- app.controller('productDetailsController', function ($scope, $http) { 
+ app.controller('productDetailsController', function ($scope, $http,$window) { 
        
+     $scope.url= $window.url;
+     
        $scope.name = "";
       $scope.mod="";
        $scope.company="";
@@ -20,7 +22,7 @@
                     'Content-Type': 'application/json'
                 }
             }
-        $http.post('http://localhost:3000/api/car/', data,config).success(function(data, status,headers,config) {
+        $http.post($scope.url, data,config).success(function(data, status,headers,config) {
             //alert("data");
         
             

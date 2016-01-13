@@ -1,5 +1,7 @@
-app.controller('updateProductController', function ($scope, $http, service1) {
+app.controller('updateProductController', function ($scope, $http, service1,$window) {
     
+    
+     $scope.url= $window.url;
         $scope.name = "";
         $scope.mod="";
         $scope.company="";
@@ -17,7 +19,7 @@ app.controller('updateProductController', function ($scope, $http, service1) {
        }
          $scope.updateForm = function(id2){
            
-            $http.put('http://localhost:3000/api/car/' + $scope.car._id,$scope.car)
+            $http.put( $scope.url + $scope.car._id,$scope.car)
             .success(function (data, status, headers) {
                 $scope.ServerResponse = data;
             }) 
