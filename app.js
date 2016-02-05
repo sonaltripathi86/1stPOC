@@ -1,9 +1,10 @@
 var url = 'http://localhost:3000/api/car/';
+var url2 = 'http://localhost:3000/api/company/';
+var url3 = 'http://localhost:3000/api/employee/';
+var url4 = 'http://localhost:3000/api/schemaForm/';
 
-var app =angular.module("website", ["ui.router"]);
+var app =angular.module("website", ['ui.router','schemaForm','ngSanitize']);
 
-
-//app.constant('url','http://localhost:3000/api/car/');
 
 app.config(function($stateProvider, $urlRouterProvider)
     {
@@ -15,7 +16,8 @@ app.config(function($stateProvider, $urlRouterProvider)
         .state('Products', {
             url: '/Products',
     templateUrl: 'products.html',
-        directive: 'productsDirective'
+        controller: 'prodController',
+        directive: 'modal'
         })
         
         .state('AboutUs', {
@@ -42,6 +44,31 @@ app.config(function($stateProvider, $urlRouterProvider)
              url: '/UpdateProduct',
             templateUrl: 'updateProduct.html',
         controller: 'updateProductController'
+        })
+    .state('SchemaForm', {
+             url: '/SchemaForm',
+            templateUrl: 'schemaForm.html' ,
+            controller: 'formController'
+        })
+        .state('ServiceForm', {
+             url: '/ServiceForm',
+            templateUrl: 'serviceForm.html' ,
+            controller: 'serviceFormController'
+        })
+        .state('DynamicForm', {
+             url: '/DynamicForm',
+            templateUrl: 'dynamicForm.html' ,
+            controller: 'dynamicFormController'
+        })
+        .state('GetFormData', {
+             url: '/GetFormData',
+            templateUrl: 'getFormData.html' ,
+            controller: 'getServiceFormController'
+        })
+        .state('GetJSONTable', {
+             url: '/GetJSONTable',
+            templateUrl: 'table.html' ,
+            controller: 'tableController'
         });
    
      $urlRouterProvider.otherwise('/Products');

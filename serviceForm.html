@@ -1,0 +1,65 @@
+
+<div>
+  <form id = "serviceForm">
+ <div class ="row">
+     <div class ="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+<label>Enter  name:</label>
+</div>
+<div class = "col-md-9 col-lg-9 col-sm-6 col-xs-6">
+<input type ="text" name = "uname" ng-model="name" required="" />
+</div>
+ </div>
+ <div class ="row">
+     <div class ="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+<label>Enter Employee Id:</label>
+     </div>
+  <div class = "col-md-9 col-lg-9 col-sm-6 col-xs-6">   
+<input type ="text" id = "mod" ng-model="empId" />
+ </div>
+ </div>
+ 
+ <div class ="row">
+     <div class ="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+<label>Enter Department:</label>
+     </div>
+  <div class = "col-md-9 col-lg-9 col-sm-6 col-xs-6">     
+<select ng-model="department">
+  <option value="Banking">Banking</option>
+  <option value="Finance">Finance</option>
+  <option value="Digital">Digital</option>
+  <option value="HealthCare">HealthCare</option>
+  <option value="Manlog">Manlog</option>
+</select>
+ </div>
+ </div>
+ 
+ <div class ="row">
+     <div class ="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+<label> Entity:</label>
+     </div>
+  <div class = "col-md-9 col-lg-9 col-sm-6 col-xs-6">     
+<input type="radio" name= "entity" value="IDC" ng-model="entity">IDC
+<input type="radio" name= "entity" value="EWF" ng-model="entity">EWF
+ </div>
+ </div>
+ <div class ="row">
+     <div class ="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+<label>Skills:</label>
+     </div>
+    <div class = "col-md-9 col-lg-9 col-sm-6 col-xs-6" ng-model="skills">   
+<input type="checkbox" id="check1" ng-model="skills.HTML">HTML
+<input type="checkbox" id="check1" ng-model="skills.Java">Java
+<input type="checkbox" id="check1" ng-model="skills.AngularJS">AngularJS
+<input type="checkbox" id="check1" ng-model="skills.SQL">SQL
+<input type="checkbox" id="check1" ng-model="skills.Customer">Customer Services
+ </div>
+ </div>
+ 
+ 	<div class ="row" >
+	<div class="col-md-12 col-sm-6 col-xs-4">
+<button type ="button" ng-click="saveData()">Submit</button>
+	</div>
+ 	</div>
+
+</form>
+</div>

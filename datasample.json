@@ -1,0 +1,93 @@
+{
+	"label": "Population on 1 January by age and sex",
+	"href": "http://ec.europa.eu/eurostat/wdds/rest/data/v2.0/json/en/demo_pjan",
+	"source": "ESTAT",
+	"updated": "2015-10-26T00:00:00Z",
+	"status": {
+		"0": ":",
+		"1": ":",
+		"2": ":",
+		"3": ":"
+		},
+	"extension": {
+		"datasetId": "demo_pjan",
+		"lang": "EN",
+		"description": null,
+		"subTitle": null,
+		"status": {
+			"label": {
+				":": "not available",
+				"e": "estimated",
+				"b": "break in time series",
+				"p": "provisional"
+			}
+		}
+	},
+	"class": "dataset",
+	"value": {
+		"26": 44593,
+		"27": 46976,
+		"28": 48451,
+		"29": 50528
+		},
+	"dimension": {
+		"id": ["age", "sex", "geo", "time"],
+		"size": [1, 1, 58, 55],
+		"age": {
+			"label": "age",
+			"category": {
+				"index": {
+					"TOTAL": 0
+				},
+				"label": {
+					"TOTAL": "Total"
+				}
+			}
+		},
+		"sex": {
+			"label": "sex",
+			"category": {
+				"index": {
+					"T": 0
+				},
+				"label": {
+					"T": "Total"
+				}
+			}
+		},
+		"geo": {
+			"label": "geo",
+			"category": {
+				"index": {
+					"AD": 0,
+					"AL": 1,
+					"AM": 2,
+					"AT": 3
+					},
+				"label": {
+					"AD": "Andorra",
+					"AL": "Albania",
+					"AM": "Armenia",
+					"AT": "Austria"
+					}
+			}
+		},
+		"time": {
+			"label": "time",
+			"category": {
+				"index": {
+					"1960": 0,
+					"1961": 1,
+					"1962": 2,
+					"1963": 3
+					},
+				"label": {
+					"1960": "1960",
+					"1961": "1961",
+					"1962": "1962",
+					"1963": "1963"
+					}
+			}
+		}
+	}
+}

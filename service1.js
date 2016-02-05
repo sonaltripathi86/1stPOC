@@ -14,5 +14,6 @@ app.service('service1', function() {
 
     function getData() {
         return shared_data;
+        console.log("*****",shared_data);
     } 
 })
