@@ -69,6 +69,11 @@ app.config(function($stateProvider, $urlRouterProvider)
              url: '/GetJSONTable',
             templateUrl: 'table.html' ,
             controller: 'tableController'
+        })
+        .state('CreateAutoForm', {
+             url: '/CreateAutoForm',
+            templateUrl: 'autoform.html' ,
+            controller: 'autoformController'
         });
    
      $urlRouterProvider.otherwise('/Products');

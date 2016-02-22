@@ -17,13 +17,20 @@
     <tbody>
         <tr>
             <td ng-repeat ="data in tableData">
-                <div ng-if="angular.isString(data)">
-                {{angular.isString(data)}}
-                </div>
-                <div ng-if="!angular.isString(data)">
-                Object: {{angular.isString(data)}}
-                </div>
-             </td> 
-        </tr>
+                {{data}}
+             </td>
+         </tr>
+                <tr>
+                    <td ng-repeat ="data in tableData">
+                        {{data.status}}
+                    </td>
+                </tr>
+                <tr>
+                    <td ng-repeat ="data in tableData">
+                        {{data.dimension}}
+                    </td>
+                </tr>
+              
+      
     </tbody>
 </table>

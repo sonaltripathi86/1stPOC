@@ -356,18 +356,18 @@ app.controller('dynamicFormController', function ($scope, $http, $window, formSe
     }
 
     $scope.pushDataUp = function (formfield) {
-        var form=$scope.form;
-        
+        var form = $scope.form;
+
         var index = $scope.form.indexOf(formfield);
         console.log("****", index);
-       
-            var temp = form[index];
-            form[index] = form[index-1];
-           form[index-1] = temp;
-           
-       console.log("swapped array****",form);
-       
-       var data = $scope.data;
+
+        var temp = form[index];
+        form[index] = form[index - 1];
+        form[index - 1] = temp;
+
+        console.log("swapped array****", form);
+
+        var data = $scope.data;
         console.log("data object while put : ", data);
 
         $http.put($scope.url + $scope.data._id, data).success(function (data, status, headers) {
@@ -379,17 +379,17 @@ app.controller('dynamicFormController', function ($scope, $http, $window, formSe
 
     $scope.pushDataDown = function (formfield) {
 
-         var form=$scope.form;
+        var form = $scope.form;
         var index = $scope.form.indexOf(formfield);
         console.log("****", index);
-       
-            var temp = form[index];
-            form[index] = form[index+1];
-           form[index+1] = temp;
-           
-       console.log("swapped array****",form);
-       
-       var data = $scope.data;
+
+        var temp = form[index];
+        form[index] = form[index + 1];
+        form[index + 1] = temp;
+
+        console.log("swapped array****", form);
+
+        var data = $scope.data;
         console.log("data object while put : ", data);
 
         $http.put($scope.url + $scope.data._id, data).success(function (data, status, headers) {

@@ -1,0 +1,39 @@
+<div>
+    <form id="dynamicForm">
+       <label>Enter form name:</label> 
+       <input type = "text" id="formName" ng-model="formName"></br>
+       <button type = "button" ng-click="createForm(formName)">Create Form</button>
+       </br></br></br>
+  </div>
+  <div>
+        <label>Form Name:</label>
+        <select id="enteredForm" ng-model="enteredForm" >
+         <option ng-repeat="value in name">{{value}}</option>  
+            
+            
+        </select>
+        </br>
+       <label>Field Name:</label>
+        <input type="text" id="name" ng-model="fieldName" />
+        </br>
+
+
+        <label>Field Type:</label>
+        <select id="fieldType" ng-model="fieldType" ng-change="changetextbox()">
+           
+            <option>Radio</option>
+            <option>CheckBox</option>
+            <option>TextBox</option>
+            <option>Dropdown</option>
+        </select>
+        </br>
+
+        <label>Field options:</label>
+        <input type="text" id="options" ng-model="options" />
+        <!--<button type ="button" ng-click="moreOptions(dynamicForm)">Add More</button>-->
+        </br>
+
+        <button type="button" ng-click="submitAutoForm()">Add Field</button>
+    </form>
+    
+</div>
